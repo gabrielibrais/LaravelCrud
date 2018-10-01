@@ -1,28 +1,28 @@
 <?php
-
-
 use Illuminate\Database\Seeder;
 use App\Mensagem;
-class mensagensTableSeeder extends Seeder
+class mensagemTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-   public function run()
+    public function run()
     {
         Mensagem::create([
-            'titulo' => 'Prova de Matemática',
-            'autor' => 'Prova sobre números imaginários',
-            'texto' => '2018-09-01 13:15:00'
+            'titulo' => 'Olá inicial',
+            'texto' => 'Olá mundo...',
+            'autor' => 'Tiago',
+            'user_id' => 1,
+            'atividade_id' => 1
         ]);
-
         Mensagem::create([
-            'titulo' => 'Desenvolver o trabalho de Tópicos Especiais',
-            'autor' => 'Implementar o trabalho final da disciplina',
-            'texto' => '2018-10-01 13:15:00'
+            'titulo' => 'Olá final',
+            'texto' => 'Olá mundo...final..',
+            'autor' => 'Maria',
+            'user_id' => 1,
+            'atividade_id' => 1
         ]);
-
     }
 }

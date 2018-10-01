@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/atividades/create', 'AtividadeController@create');
+Route::get('/mensagens/create', 'MensagemController@create');
+
 Route::get('/atividades', 'AtividadeController@index');
 Route::get('/mensagens', 'MensagemController@index');
 
@@ -26,9 +30,6 @@ Route::get('/mensagens/{id}', 'MensagemController@show');
 Route::get('/atividades/{id}/edit','AtividadeController@edit');
 Route::get('/mensagens/{id}/edit','MensagemController@edit');
 
-Route::get('/atividades/create', 'AtividadeController@create');
-Route::get('/mensagens/create', 'MensagemController@create');
-
 Route::post('/atividades', 'AtividadeController@store');
 Route::post('/mensagens', 'MensagemController@store');
 
@@ -37,7 +38,6 @@ Route::put('/mensagens/{id}', 'MensagemController@update');
 
 Route::get('/atividades/{id}/delete', 'AtividadeController@delete');
 Route::get('/mensagens/{id}/delete', 'MensagemController@delete');
-
 
 Route::delete('/atividades/{id}', 'AtividadeController@destroy');
 Route::delete('/mensagens/{id}', 'MensagemController@destroy');
